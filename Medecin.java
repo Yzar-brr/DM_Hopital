@@ -1,12 +1,15 @@
-public class Medecin {
-    private String nom;
-    private String specialite;
+public class Medecin extends Personnel {
+    private final String nom;
+    private final String specialite;
+    
 
-    public Medecin(String nom, String specialite) {
+    public Medecin(String nom, String specialite, String prenom, double salaire) {
+        super(nom, prenom, salaire);
         this.nom = nom;
         this.specialite = specialite;
     }
 
+    @Override
     public String getNom() {
         return nom;
     }
