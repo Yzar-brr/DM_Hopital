@@ -4,6 +4,13 @@ public class Infirmier extends Personnel {
         super(nom, prenom, salaire);
         this.unite = unite;
     }
+
+    @Override
+    public void travailler() {
+        System.out.println("L'infirmier " + getNom() + " " + getPrenom() + " prend soin des patients.");
+    }
+
+    
     public String getUnite() {
         return unite;
     }

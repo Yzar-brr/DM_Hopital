@@ -10,6 +10,8 @@ public abstract class Personnel {
         this.salaire = salaire;
     }
 
+    public abstract void travailler();
+
     public String getNom() {
         return this.nom;
     }

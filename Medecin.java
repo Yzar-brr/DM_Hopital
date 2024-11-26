@@ -10,6 +10,11 @@ public class Medecin extends Personnel {
     }
 
     @Override
+    public void travailler() {
+        System.out.println("Le médecin " + getNom() + " " + getPrenom() + " a des consultations avec des patients.");
+    }
+
+    @Override
     public String getNom() {
         return nom;
     }
