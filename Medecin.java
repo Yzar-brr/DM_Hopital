@@ -9,25 +9,29 @@ public class Medecin extends Personnel {
         this.specialite = specialite;
     }
 
-    @Override
-    public void travailler() {
-        System.out.println("Le médecin " + getNom() + " " + getPrenom() + " a des consultations avec des patients.");
-    }
-
+    
     @Override
     public String getNom() {
         return nom;
     }
-
+    
     public String getSpecialite() {
         return specialite;
     }
-
+    
     public void soigner(Patient patient) {
         System.out.println("Le médecin " + nom + " soigne le patient " + patient.getNom() + " pour " + patient.getMaladie());
         patient.setMaladie("Guéri");
     }
-
+    
+    public void traiterUrgence(Patient patient) {
+        System.out.println("Le médecin " + getNom() + " " + getPrenom() + " traite l'urgence du patient " + patient.getNom() + " immédiatement.");
+    }
+    @Override
+    public void travailler() {
+        System.out.println("Le médecin " + getNom() + " " + getPrenom() + " a des consultations avec des patients.");
+    }
+    
     @Override
     public String toString() {
         return "Medecin{" +
@@ -35,4 +39,5 @@ public class Medecin extends Personnel {
                 ", specialite='" + specialite + '\'' +
                 '}';
     }
+
 }

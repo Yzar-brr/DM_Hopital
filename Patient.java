@@ -2,11 +2,13 @@ public class Patient {
     private String nom;
     private int age;
     private String maladie;
+    private boolean estGueri;
 
-    public Patient(String nom, int age, String maladie) {
+    public Patient(String nom, int age, String maladie, boolean estGueri) {
         this.nom = nom;
         this.age = age;
         this.maladie = maladie;
+        this.estGueri = estGueri;
     }
 
     public String getNom() {
@@ -25,12 +27,21 @@ public class Patient {
         this.maladie = maladie;
     }
 
+    public boolean getStatusGueri() {
+        return estGueri;
+    }
+
+    public void setEstGueri(boolean estGueri) {
+        this.estGueri = estGueri;
+    }
+
     @Override
     public String toString() {
         return "Patient{" +
                 "nom='" + nom + '\'' +
                 ", age=" + age +
                 ", maladie='" + maladie + '\'' +
+                ", estGueri=" + estGueri +
                 '}';
     }
 }

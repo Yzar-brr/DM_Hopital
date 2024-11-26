@@ -1,14 +1,11 @@
-
-import java.util.Date;
-
 public class Consultation {
-    private Date date;
+    private String date;
     private String diagnostic;
     private String traitement;
     private Medecin medecin;
     private Patient patient;
 
-    public Consultation(Date date, String diagnostic, String traitement, Medecin medecin, Patient patient) {
+    public Consultation(String date, String diagnostic, String traitement, Medecin medecin, Patient patient) {
         this.date = date;
         this.diagnostic = diagnostic;
         this.traitement = traitement;
@@ -20,7 +17,7 @@ public class Consultation {
         return patient.getNom();
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
