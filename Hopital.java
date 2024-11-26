@@ -5,6 +5,7 @@ public class Hopital {
     private String nom;
     private List<Patient> patients;
     private List<Medecin> medecins;
+    private List<Consultation> consultations;
 
     public Hopital(String nom) {
         this.nom = nom;
@@ -30,5 +31,10 @@ public class Hopital {
         for (Medecin medecin : medecins) {
             System.out.println(medecin);
         }
+    }
+
+    public void ajouterConsultation(Consultation consultation) {
+        consultations.add(consultation);
+        System.out.println("Consultation créer pour : " + consultation.getNom());
     }
 }
